@@ -8,7 +8,7 @@ import product5 from "../assets/product5.jpg";
 import product6 from "../assets/product6.jpg";
 import orderImg from "../assets/order.png";
 import catchingImg from "../assets/catching.jpg";
-import packingImg from "../assets/Packing.jpg";
+import packingImg from "../assets/packing.jpg";
 import deliveryImg from "../assets/delivery.jpg";
 import mealImg from "../assets/meal.jpg";
 export default function Home() {
