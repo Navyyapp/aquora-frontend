@@ -1,0 +1,118 @@
+/* ===================== NAVBAR BASE ===================== */
+.navbar {
+  background: linear-gradient(180deg, #0095c6, #00b4d8);
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.nav-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* ===================== NAV LINKS ===================== */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  color: #00e0c0;
+}
+
+/* ===================== HAMBURGER ICON ===================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Keep the hamburger same for open & close (no X animation) */
+.hamburger.active span {
+  background: #00e0c0; /* Optional: change color when menu is open */
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: linear-gradient(180deg, #0095c6, #00b4d8);
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0;
+    gap: 20px;
+    transform: translateY(-120%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li a {
+    font-size: 1.1rem;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+/* ===================== SMALL SCREENS ===================== */
+@media (max-width: 500px) {
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,96 @@
+.about-page {
+  padding: 60px 8%;
+  font-family: "Poppins", sans-serif;
+  background-color: #f2faff;
+}
+
+/* -------------------- HERO SECTION -------------------- */
+.about-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-hero h1 {
+   color: #0095c6;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* -------------------- CONTENT SECTION -------------------- */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+.about-text {
+  flex: 1;
+  color: #333;
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+.about-text h2 {
+   color: #0095c6;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+/* -------------------- IMAGE SECTION -------------------- */
+.about-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img {
+  width: 420px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-img img:hover {
+  transform: scale(1.03);
+}
+
+/* -------------------- REVERSE LAYOUT (for alternating sections) -------------------- */
+.about-content.reverse {
+  flex-direction: row-reverse;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content.reverse {
+    flex-direction: column;
+  }
+
+  .about-img img {
+    width: 100%;
+    max-width: 90%;
+  }
+}
